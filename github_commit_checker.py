@@ -7,7 +7,7 @@ def fetch_commits(repo):
     
     if response.status_code == 200:
         commits = response.json()
-        for commit in commits[:10]:  # Limit to 10 commits
+        for commit in commits:  
             message = commit['commit']['message']
             author = commit['commit']['author']['name']
             print(f"Author: {author}\nMessage: {message}\n")
